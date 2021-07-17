@@ -13,7 +13,7 @@ class UserController{
     {
         try{
             $connection = DB::DBConnectionInitializer();
-            $sql = "SELECT * FROM task ORDER BY id DESC";
+            $sql = "SELECT * FROM item ORDER BY id DESC";
 
             $statement = $connection->query($sql);
             $statement->execute();
@@ -31,7 +31,7 @@ class UserController{
     {
         try{
             $connection = DB::DBConnectionInitializer();
-            $sql = "SELECT * FROM task WHERE random = '$randomString'";
+            $sql = "SELECT * FROM item WHERE foriegnid = '$randomString' ORDER BY id DESC";
 
             $statement = $connection->query($sql);
             $statement->execute();
@@ -45,8 +45,40 @@ class UserController{
         }
     }
 
+    public function UpdatePassword($Email,$password)
+    {
+            $hashed_password = password_hash($password,PASSWORD_DEFAULT);
+            $connection = DB::DBConnectionInitializer();
+            $sql = "UPDATE user SET password='$hashed_password' WHERE email = '$Email'";
+            $connection->exec($sql);
+            return "Updated";
+    }
+
+
+    public function getUserByRandomID($randomString)
+    {
+        try{
+        $connection = DB::DBConnectionInitializer();
+        $sql = "SELECT name FROM user WHERE random = '$randomString'";
+        $statement = $connection->query($sql);
+            $statement->execute();
+
+            $result = $statement->fetchAll();
+
+            return $result;
+
+        }
+        catch (PDOException $e) {
+            return $e->getMessage();
+        }
+
+    }
+
+
 
 }
+
+
 
 
 

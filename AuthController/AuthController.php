@@ -1,6 +1,6 @@
 <?php 
-require_once '../DB/DB.php';
-require '../helper/ControllerHelper/output.php';
+include_once "../../DB/DB.php";
+include_once "../../helper/ControllerHelper/output.php";
 
 class AuthController{
 
@@ -9,7 +9,7 @@ class AuthController{
         
     }
 
-    protected function UserRegistration($Name,$Email,$Phone,$password,$random)
+    public function UserRegistration($Name,$Email,$Phone,$password,$random)
     {
         try{
             $connection = DB::DBConnectionInitializer();
@@ -41,7 +41,7 @@ class AuthController{
 
     }
 
-    protected function VerifyEmailAddressDuplication($Email)
+    public function VerifyEmailAddressDuplication($Email)
     {
         try{
             $connection = DB::DBConnectionInitializer();
@@ -63,7 +63,7 @@ class AuthController{
         }
     }
 
-    protected function UserVerification($Email,$password)
+    public function UserVerification($Email,$password)
     {
         try{
             $connection = DB::DBConnectionInitializer();
@@ -77,7 +77,7 @@ class AuthController{
             //? setting the output as an associative array
             $result = $statement->fetchAll();
 
-            $Verification_state = (count($result)>=1) ? Verify_User($result,$Email,$password):"Error Signign in";
+            $Verification_state = (count($result)>=1) ? Verify_User($result,$Email,$password):"Error";
 
             return $Verification_state;
 
@@ -90,7 +90,7 @@ class AuthController{
         }
     }
 
-    protected function UserFindEmail($Email,$newpassword)
+    public function UserFindEmail($Email,$newpassword)
     {
         try{
             $connection = DB::DBConnectionInitializer();
@@ -104,7 +104,7 @@ class AuthController{
             //? setting the output as an associative array
             $result = $statement->fetchAll();
 
-            $ResetState =  (count($result) >= 1)? $this->UpdatePassword($Email,$newpassword):"No Such Email Exsists";
+            $ResetState =  (count($result) >= 1)? $this->UpdatePassword($Email,$newpassword):"Error";
             return $ResetState;
         }
         catch (PDOException $e) {
@@ -112,7 +112,7 @@ class AuthController{
         }
     }
 
-    protected function UpdatePassword($Email,$password)
+    public function UpdatePassword($Email,$password)
     {
             $hashed_password = password_hash($password,PASSWORD_DEFAULT);
             $connection = DB::DBConnectionInitializer();
@@ -121,12 +121,7 @@ class AuthController{
             return "Updated";
     }
 
-    protected function UserLogout()
-    {
-        session_unset();
-        session_destroy();
-        return "Logged Out";
-    }
+
 }
 
 
