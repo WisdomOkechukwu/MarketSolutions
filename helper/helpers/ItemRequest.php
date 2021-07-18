@@ -92,11 +92,14 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'):
             header("Refresh:0; url=../../Routes/UpdateItem.php");
         }
         
+        
         if ($priceState == "true" && $nameState == "true" && $DescriptionState == "true") 
         {
-            $itemUpdateStatus = $item->UpdateItem($name,$description,$price,$randomString);
+            $newName = $name;
+            $itemUpdateStatus = $item->UpdateItem($newName,$description,$price,$randomString);
             if($itemUpdateStatus == "Updated")
             {
+                
                 $_SESSION['UpdatedStatus'] = "true";
                 header("Refresh:0; url=../../Routes/UpdateItem.php");
             }

@@ -7,7 +7,7 @@ class DB{
     // static $DBpass = "";
     // static $DBname = "market";
 
-    //?Heroku Configurations
+    // //?Heroku Configurations
     static $DBhost= "us-cdbr-east-04.cleardb.com";
     static $DBusername = "ba1815b1a6b77f";
     static $DBpass = "ad44cdf8";
