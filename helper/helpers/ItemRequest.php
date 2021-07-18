@@ -50,7 +50,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'):
                 $_SESSION['old_itemDescription'] = "";
                 $_SESSION['old_itemPrice'] = "";
                 $_SESSION['AddedItem'] = 'true';
-                header("Refresh:0; url=../../Routes/Personalitems.php");
+                header("Refresh:0; url=../../Routes/PersonalItem.php");
             }
         }
         
