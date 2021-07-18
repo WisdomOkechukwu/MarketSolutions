@@ -28,7 +28,7 @@ $ProductData = $user->showItemOnDashboard();
         <!-- Bootstrap icons-->
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="../vendor/asset/css/styles.css" rel="stylesheet" />
+        <link href="../asset/asset/css/styles.css" rel="stylesheet" />
     </head>
     <body class="d-flex flex-column h-100">
         <main class="flex-shrink-0">
@@ -59,7 +59,7 @@ $ProductData = $user->showItemOnDashboard();
                                 </div>
                             </div>
                         </div>
-                        <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="../vendor/delta/Market Solutions.png" alt="..." /></div>
+                        <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center"><img class="img-fluid rounded-3 my-5" src="../asset/delta/Market Solutions.png" alt="..." /></div>
                     </div>
                 </div>
             </header>
@@ -79,7 +79,7 @@ $ProductData = $user->showItemOnDashboard();
                         <?php foreach ($ProductData as $key => $value) {?>
                             <div class="col-lg-4 mb-5">
                                 <div class="card h-100 shadow border-0">
-                                    <img class="card-img-top" src="../vendor/delta/Item and Products.png" alt="..." />
+                                    <img class="card-img-top" src="../asset/delta/Item and Products.png" alt="..." />
                                     <div class="card-body p-4">
                                         <div class="badge bg-primary bg-gradient rounded-pill mb-2">Information</div>
                                         <h5 class="card-title mb-3"><?php echo $value['name']?></h5>
@@ -88,7 +88,7 @@ $ProductData = $user->showItemOnDashboard();
                                     <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
                                         <div class="d-flex align-items-end justify-content-between">
                                             <div class="d-flex align-items-center">
-                                                <img class="rounded-circle me-3" src="../vendor/delta/Market.png" alt="..." />
+                                                <img class="rounded-circle me-3" src="..asset/delta/Market.png" alt="..." />
                                                 <div class="small">
                                                     <div class="fw-bold"><?php 
                                                 $KeyName = $user->getUserByRandomID($value['foriegnid']);
@@ -128,6 +128,6 @@ $ProductData = $user->showItemOnDashboard();
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="../vendor/asset/js/scripts.js"></script>
+        <script src="../asset/asset/js/scripts.js"></script>
     </body>
 </html>

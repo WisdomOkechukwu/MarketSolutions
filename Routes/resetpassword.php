@@ -20,7 +20,7 @@ if(!isset($_SESSION['name_loggedin']))
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" /
         
         <!-- Core theme CSS (includes Bootstrap)-->
-        <link href="../vendor/asset/css/styles.css" rel="stylesheet" />
+        <link href="../asset/asset/css/styles.css" rel="stylesheet" />
     </head>
     <body class="d-flex flex-column">
         <main class="flex-shrink-0"> 
@@ -94,7 +94,7 @@ if(!isset($_SESSION['name_loggedin']))
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
-        <script src="../vendor/asset/js/scripts.js"></script>
+        <script src="../asset/asset/js/scripts.js"></script>
         <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
         <!-- * *                               SB Forms JS                               * *-->
         <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
