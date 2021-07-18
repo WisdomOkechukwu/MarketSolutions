@@ -88,7 +88,7 @@ $ProductData = $user->showItemOnDashboard();
                                     <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
                                         <div class="d-flex align-items-end justify-content-between">
                                             <div class="d-flex align-items-center">
-                                                <img class="rounded-circle me-3" src="..asset/asset/delta/Market.png" alt="..." />
+                                                <img class="rounded-circle me-3" src="../asset/delta/Market.png" alt="..." />
                                                 <div class="small">
                                                     <div class="fw-bold"><?php 
                                                 $KeyName = $user->getUserByRandomID($value['foriegnid']);
