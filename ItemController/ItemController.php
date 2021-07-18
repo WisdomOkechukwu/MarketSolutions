@@ -65,7 +65,7 @@ class ItemController{
     {
         try{
             $connection = DB::DBConnectionInitializer();
-            $sql = "UPDATE item SET name='$name',description= '$description' AND price='$price'
+            $sql = "UPDATE item SET name='$name',description='$description',price='$price'
              WHERE random = '$RandomString'";
             $connection->exec($sql);
             return "Updated";

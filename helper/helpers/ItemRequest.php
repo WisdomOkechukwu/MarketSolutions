@@ -50,7 +50,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'):
                 $_SESSION['old_itemDescription'] = "";
                 $_SESSION['old_itemPrice'] = "";
                 $_SESSION['AddedItem'] = 'true';
-                header("Refresh:0; url=../../Routes/PersonalItem.php");
+                header("Refresh:0; url=../../Routes/PersonalItems.php");
             }
         }
         
@@ -95,8 +95,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'):
         
         if ($priceState == "true" && $nameState == "true" && $DescriptionState == "true") 
         {
-            $newName = $name;
-            $itemUpdateStatus = $item->UpdateItem($newName,$description,$price,$randomString);
+            $itemUpdateStatus = $item->UpdateItem($name,$description,$price,$randomString);
             if($itemUpdateStatus == "Updated")
             {
                 

@@ -2,16 +2,16 @@
 class DB{
     
     //?LocalHost Configuration
-    // static $DBhost= "localhost";
-    // static $DBusername = "root";
-    // static $DBpass = "";
-    // static $DBname = "market";
+    static $DBhost= "localhost";
+    static $DBusername = "root";
+    static $DBpass = "";
+    static $DBname = "market";
 
     // //?Heroku Configurations
-    static $DBhost= "us-cdbr-east-04.cleardb.com";
-    static $DBusername = "ba1815b1a6b77f";
-    static $DBpass = "ad44cdf8";
-    static $DBname = "heroku_3f811a4aab5bb88";
+    // static $DBhost= "us-cdbr-east-04.cleardb.com";
+    // static $DBusername = "ba1815b1a6b77f";
+    // static $DBpass = "ad44cdf8";
+    // static $DBname = "heroku_3f811a4aab5bb88";
 
     static function DBConnectionInitializer()
     {
